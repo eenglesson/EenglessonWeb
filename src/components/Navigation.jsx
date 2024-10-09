@@ -1,14 +1,40 @@
+import { useEffect, useState } from 'react';
 import Button from './Buttons/Button';
 
 export default function Navigation() {
   const menuItems = ['Home', 'Work', 'About', 'Contact'];
+  const [isVisible, setIsVisible] = useState(true); // Controls visibility
+  const [lastScrollY, setLastScrollY] = useState(0); // Tracks previous scroll position
+
+  // Track scroll direction
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 30) {
+        // Scrolling down, hide the navigation
+        setIsVisible(false);
+      } else if (currentScrollY < lastScrollY) {
+        // Scrolling up, show the navigation
+        setIsVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollY]);
 
   return (
     <>
       <header
-        className={
-          'fixed top-0 left-0 w-full h-[80px] transition-transform duration-300 z-20 ease-in-out '
-        }
+        className={`fixed top-0 left-0 w-full h-[80px] transition-transform duration-300 z-20 ease-in-out ${
+          isVisible ? 'translate-y-0' : '-translate-y-full'
+        }`}
       >
         {/* Container to limit width and ensure proper alignment */}
         <div className='w-full max-w-[1800px] mx-auto px-[16px] h-full'>
