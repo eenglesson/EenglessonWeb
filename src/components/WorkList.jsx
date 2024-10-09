@@ -51,7 +51,7 @@ export default function WorkList() {
   ];
   return (
     <>
-      <section className='flex w-full flex-col gap-20 '>
+      <section className='flex w-full flex-col gap-20  '>
         <motion.div
           variants={fadeInAnimationVariants}
           initial='initial'
@@ -61,7 +61,7 @@ export default function WorkList() {
           <WorkBig />
         </motion.div>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-[64px] md:gap-y-[32px] md:gap-[16px]'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-[64px] md:gap-y-[32px] md:gap-[16px] md:px-[16px]'>
           {workItems.map((item, index) => (
             <motion.div
               key={index}

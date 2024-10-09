@@ -67,7 +67,7 @@ export default function Services() {
         whileInView='animate'
         viewport={{ once: true }}
         className='flex flex-col 
-         gap-8'
+         gap-8 px-[16px]'
       >
         <h3 className='text-bodyDefault'>Services</h3>
         <aside>

@@ -29,7 +29,7 @@ function App() {
   return (
     <>
       <div className='relative flex justify-center bg-white mx-auto overflow-hidden'>
-        <section className='flex flex-col gap-[140px] sm:mt-[200px] w-fit sm:gap-[240px] bg-white px-[16px] md:px-[16px] relative mb-[240px]'>
+        <section className='flex flex-col gap-[128px] sm:mt-[200px] w-fit sm:gap-[192px] bg-white  relative mb-[240px]'>
           {isMobile ? <HamburgerNav /> : <Navigation />}
           <Hero />
           <WorkList />

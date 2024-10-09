@@ -22,13 +22,13 @@ const fadeInAnimationVariants = {
 export default function Hero() {
   return (
     <>
-      <section className='flex flex-col gap-[80px] '>
+      <section className='flex flex-col gap-[64px] px-[16px]'>
         <motion.p
           variants={fadeInAnimationVariants}
           initial='initial'
           whileInView='animate'
           viewport={{ once: true }}
-          className='text-bodyDefault'
+          className='text-bodySmall sm:text-bodyDefault'
         >
           Creative Solutions · Software Engineer
         </motion.p>

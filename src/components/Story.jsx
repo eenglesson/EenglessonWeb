@@ -23,7 +23,7 @@ const fadeInAnimationVariants = {
 export default function Story() {
   return (
     <>
-      <section className='flex flex-col gap-[64px] items-start justify-between w-full lg:gap-[64px] lg:flex-row'>
+      <section className='flex px-[16px] flex-col gap-[64px] items-start justify-between w-full lg:gap-[64px] lg:flex-row'>
         <div className='flex w-fit flex-shrink-0'>
           <motion.h3
             variants={fadeInAnimationVariants}

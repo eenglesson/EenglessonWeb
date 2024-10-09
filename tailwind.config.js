@@ -20,6 +20,7 @@ module.exports = {
         h3: ['24px', '1.4'],
         h4: ['18px', '1.4'],
         bodyDefault: ['16px', '1.4'],
+        bodySmall: ['12px', '1.4'],
       },
       fontFamily: {
         sans: ['Manrope', 'sans-serif'],

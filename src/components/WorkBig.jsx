@@ -19,7 +19,7 @@ export default function WorkBig() {
             <TiltedButton text={'Show'} />
           </div>
         </aside>
-        <div className='flex flex-col gap-[8px]'>
+        <div className='flex flex-col gap-[8px] px-[16px]'>
           <h3 className='text-h4 text-dark70'>Fintech</h3>
           <p className='text-h3'>Fintech Dello Banking App</p>
         </div>

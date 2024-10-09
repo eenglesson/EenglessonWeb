@@ -43,7 +43,7 @@ export default function HamburgerNav() {
   }, [isOpen]);
 
   return (
-    <nav className='flex justify-between h-[80px] w-full'>
+    <nav className='flex justify-between h-[80px] w-full px-[16px]'>
       <h1 className='text-h2 flex items-center'>Eenglesson</h1>
       <button className='relative inline-block z-40 bg-none cursor-default'>
         <aside
@@ -66,7 +66,7 @@ export default function HamburgerNav() {
         </aside>
       </button>
       <ul
-        className={`absolute left-0 w-full flex flex-col py-[100px] pl-[16px] gap-6 rounded-2xl bg-customLight transition-all duration-[300ms] ease-in-out ${
+        className={`absolute left-0 w-full flex flex-col py-[100px] pl-[16px] gap-6 rounded-b-2xl bg-customLight transition-all duration-[300ms] ease-in-out ${
           isOpen ? 'top-0' : 'top-[-100%]'
         }`}
         style={{
