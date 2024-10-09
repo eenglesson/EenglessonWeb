@@ -61,7 +61,7 @@ export default function WorkList() {
           <WorkBig />
         </motion.div>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-[64px]'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-[64px] md:gap-y-[32px] md:gap-[16px]'>
           {workItems.map((item, index) => (
             <motion.div
               key={index}
