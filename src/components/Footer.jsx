@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <>
       <section className='flex flex-col w-full max-w-[1800px] pt-[120px] pb-6 sm:pt-[120px] '>
-        <div className='bg-black flex  h-fit w-full flex-col sm:flex-row gap-[64px] justify-between'>
+        <div className='bg-black flex gap-[32px]  h-fit w-full flex-col sm:flex-row justify-between'>
           <aside className='flex flex-col gap-10'>
             <h3 className='text-bodyDefault text-white'>Contact</h3>
             <p className='text-h2 md:text-h1 lg:text-display text-white '>
@@ -18,7 +18,10 @@ export default function Footer() {
           <aside className='flex w-fit gap-[32px] md:gap-[64px] shrink-0'>
             <div className='flex flex-col  gap-4'>
               {menuItems.map((item, i) => (
-                <li className='text-white cursor-pointer list-none text-h4'>
+                <li
+                  key={i}
+                  className='text-white cursor-pointer list-none text-h4'
+                >
                   {item}
                 </li>
               ))}
