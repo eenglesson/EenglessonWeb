@@ -61,7 +61,7 @@ export default function Services() {
 
   return (
     <>
-      <motion.section
+      <section
         variants={fadeInAnimationVariants}
         initial='initial'
         whileInView='animate'
@@ -69,10 +69,22 @@ export default function Services() {
         className='flex flex-col 
          gap-8 px-[16px]'
       >
-        <h3 className='text-bodyDefault'>Services</h3>
+        <motion.h3
+          variants={fadeInAnimationVariants}
+          initial='initial'
+          whileInView='animate'
+          viewport={{ once: true }}
+          className='text-bodyDefault'
+        >
+          Services
+        </motion.h3>
         <aside>
           {services.map((service) => (
-            <div
+            <motion.div
+              variants={fadeInAnimationVariants}
+              initial='initial'
+              whileInView='animate'
+              viewport={{ once: true }}
               key={service.id}
               className='border-b border-grey30 cursor-pointer overflow-hidden py-6'
               onClick={() => toggleDiv(service.id)}
@@ -106,10 +118,10 @@ export default function Services() {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
+            </motion.div>
           ))}
         </aside>
-      </motion.section>
+      </section>
     </>
   );
 }

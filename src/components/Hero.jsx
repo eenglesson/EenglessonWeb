@@ -22,7 +22,7 @@ const fadeInAnimationVariants = {
 export default function Hero() {
   return (
     <>
-      <section className='flex flex-col gap-[64px] px-[16px]'>
+      <section className='flex -mt-[48px] flex-col gap-[48px] px-[16px]'>
         <motion.p
           variants={fadeInAnimationVariants}
           initial='initial'
