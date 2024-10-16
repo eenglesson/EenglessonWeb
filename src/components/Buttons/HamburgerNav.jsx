@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
-const menuItems = ['Work', 'About', 'Contact'];
+const menuItems = [
+  { name: 'Home', path: '/' },
+  { name: 'Work', path: '/work' },
+  { name: 'About', path: '/about' },
+  { name: 'Contact', path: '/contact' },
+];
 
 const fadeInAnimationVariants = {
   initial: {
@@ -23,9 +29,11 @@ const fadeInAnimationVariants = {
 
 export default function HamburgerNav() {
   const [isOpen, setIsOpen] = useState(false);
+  const [hasClicked, setHasClicked] = useState(false);
 
   const toggleHamburger = () => {
     setIsOpen(!isOpen);
+    setHasClicked(true); // När användaren klickar aktiveras animationerna
   };
 
   useEffect(() => {
@@ -53,14 +61,22 @@ export default function HamburgerNav() {
           {/* First Line */}
           <span
             className={`w-full h-[2px] bg-black rounded-full ${
-              isOpen ? 'animate-line1Open' : 'animate-line1Close'
+              hasClicked
+                ? isOpen
+                  ? 'animate-line1Open'
+                  : 'animate-line1Close'
+                : ''
             }`}
           ></span>
 
           {/* Second Line */}
           <span
             className={`w-full h-[2px] bg-black rounded-full ${
-              isOpen ? 'animate-line2Open' : 'animate-line2Close'
+              hasClicked
+                ? isOpen
+                  ? 'animate-line2Open'
+                  : 'animate-line2Close'
+                : ''
             }`}
           ></span>
         </aside>
@@ -82,7 +98,7 @@ export default function HamburgerNav() {
             whileInView='animate'
             onClick={() => setIsOpen(false)}
           >
-            {name}
+            <Link to={name.path}>{name.name}</Link>
           </motion.li>
         ))}
       </ul>

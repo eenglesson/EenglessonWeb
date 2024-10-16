@@ -20,7 +20,7 @@ const fadeInAnimationVariants = {
   },
 };
 
-export default function Succes() {
+export default function Success() {
   return (
     <>
       <section className='flex flex-col gap-[64px] px-[16px] items-start justify-between w-full lg:gap-[32px] lg:flex-row'>

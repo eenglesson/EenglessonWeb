@@ -16,7 +16,7 @@ export default function WorkBig() {
             />
           </div>
           <div className='hidden md:block absolute left-4 bottom-5'>
-            <TiltedButton text={'Show'} />
+            <TiltedButton />
           </div>
         </aside>
         <div className='flex flex-col gap-[8px] px-[16px]'>

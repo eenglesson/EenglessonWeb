@@ -1,8 +1,14 @@
 import { useEffect, useState } from 'react';
 import Button from './Buttons/Button';
+import { Link } from 'react-router-dom';
 
 export default function Navigation() {
-  const menuItems = ['Home', 'Work', 'About', 'Contact'];
+  const menuItems = [
+    { name: 'Home', path: '/' },
+    { name: 'Work', path: '/work' },
+    { name: 'About', path: '/about' },
+    { name: 'Contact', path: '/contact' },
+  ];
   const [isVisible, setIsVisible] = useState(true); // Controls visibility
   const [lastScrollY, setLastScrollY] = useState(0); // Tracks previous scroll position
 
@@ -49,7 +55,7 @@ export default function Navigation() {
                     className='list-none text-h4 hover:text-dark50 duration-200'
                     key={index}
                   >
-                    {name}
+                    <Link to={name.path}>{name.name}</Link>
                   </li>
                 ))}
               </ul>
